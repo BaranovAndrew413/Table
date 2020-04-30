@@ -1,6 +1,9 @@
 #include<iostream>
+#include<string>
 using namespace std;
-template <class TKey, class TValue>
+typedef int TKey;
+typedef string TValue;
+
 class TRecord{
 protected: TKey Key;
 		   TValue Value;

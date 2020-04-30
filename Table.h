@@ -7,7 +7,7 @@ using namespace std;
 #define TabNoRec -103
 #define TabRecDblr -104//дублирования записи, т.к запись уже была
 #define TabMaxSize 25
-template <class TKey,class TValue>
+
 
 class TTable
 {
@@ -37,7 +37,7 @@ public:
 	virtual int IsEnd() const = 0;
 	virtual TKey GetKey() const = 0;
 	virtual TValue GetValue() const = 0;
-	friend ostream& operator<<(ostrean &os, TTable &tab)
+	friend ostream& operator<<(ostream &os, TTable &tab)
 	{
 		os << "Table printing" << endl;
 		for (tab.Reset(); !tab.IsEnd(); tab.GoNext())
