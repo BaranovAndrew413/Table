@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="TSortTable.h" />
     <ClInclude Include="ScanTable.h" />
     <ClInclude Include="TArrayTable.h" />
     <ClInclude Include="Table.h" />
@@ -71,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ScanTable.cpp" />
+    <ClCompile Include="TSortTable.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
