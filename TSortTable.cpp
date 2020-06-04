@@ -35,7 +35,23 @@ bool TSortTable::FindRecord(TKey k){
 
 }
 int TSortTable::InsRecord(TKey k, TValue pVal){
+	if (IsFull()) {
+		return TabFull;
+	}
+	else {
+		int temp = FindRecord(k);
+		for (int i = DataCount; i > CurrPos; i--)
+			pRecs[i] = pRecs[i - 1];
+		pRecs[CurrPos].Key = k;
+		pRecs[CurrPos].Value = pVal;
+		DataCount++;
+	}
 }
 int TSortTable::DelRecord(TKey k){
+	bool temp = FindRecord(k);
+	for (int i = CurrPos; i < DataCount - 1; i++)
+		pRecs[i] = pRecs[i + 1];
+	DataCount--;
+	return TabCorrect;
 
 }

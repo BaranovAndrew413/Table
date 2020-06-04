@@ -15,7 +15,25 @@ bool TScanTable::FindRecord(TKey k){
 	
 }
 int TScanTable::InsRecord(TKey k, TValue pVal){
+	if (IsFull()) {
+		return TabFull;
+	}
+	else {
+		pRecs[DataCount].Key = k;
+		pRecs[DataCount].Value = pVal;
+		DataCount++;
+		return TabCorrect;
+	}
 }
 int TScanTable::DelRecord(TKey k){
+	int temp = FindRecord(k);
+	if (temp == 0) {
+		return temp;
+	}
+	else {
+		pRecs[CurrPos] = pRecs[DataCount - 1];
+		DataCount--;
+		return TabCorrect;
+	}
 
 }

@@ -7,6 +7,8 @@ typedef string TValue;
 class TRecord{
 protected: TKey Key;
 		   TValue Value;
+		   virtual void Print(ostream &os) { os << Key << " " << Value; }
+
 public:
 	TRecord(){}
 	TRecord(TKey k){ Key = k; }

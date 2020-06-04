@@ -7,6 +7,7 @@ using namespace std;
 #define TabNoRec -103
 #define TabRecDblr -104//дублирования записи, т.к запись уже была
 #define TabMaxSize 25
+#define TabCorrect
 
 
 class TTable
